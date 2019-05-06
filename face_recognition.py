@@ -12,7 +12,8 @@ font = cv2.FONT_HERSHEY_COMPLEX
 #initiate id counter
 id = 0
 
-names = ['None', 'Buma', 'Cyprian', 'Akom']
+names = ['None', 'Buma', 'ClairSDFYU[ '
+                         '', 'Akom', 'Flora']
 
 cam = cv2.VideoCapture(0)
 cam.set(3, 640)
