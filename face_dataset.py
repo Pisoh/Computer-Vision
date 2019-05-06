@@ -6,6 +6,8 @@ import os
 
 
 def getting_pic():
+    global name
+    global age
     cam = cv2.VideoCapture(0)
     cam.set(3, 640) # set video width
     cam.set(4, 480) # set video height
@@ -27,7 +29,7 @@ def getting_pic():
 
             #Save the captured image into the datasets folder
 
-            cv2.imwrite("dataset/User." + str(face_id) + '.' + str(count) + ".jpg", gray[y:y+h, x:x+w])
+            cv2.imwrite("dataset/"+ name + str(face_id) + '.' + str(count) + ".jpg", gray[y:y+h, x:x+w])
             cv2.imshow('image', img)
 
         k = cv2.waitKey(100)    #Press 'Esc' to exit the video
