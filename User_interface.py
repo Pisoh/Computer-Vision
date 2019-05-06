@@ -4,13 +4,15 @@
 from tkinter import *
 from tkinter.filedialog import askopenfilename
 import cv2
-import mysql.connector
+import face_dataset
 
 global filename
 
 def image_selection():
-     filename = askopenfilename()
-     t1.insert(END, filename)
+     face_dataset.getting_pic()
+     text = StringVar
+     text = "Enter user id and press <return> ==>  "
+     t1.insert(END, text)
 
 def img_upload():
     t1.insert(END, filename)
@@ -49,7 +51,7 @@ l4 = Label(window, text='Image')
 l4.grid(row=3, column=0)
 
 #This button gets an image saved in the system and saves in the filename variable
-b1 = Button(window, text="Choose image", command = image_selection)
+b1 = Button(window, text="Take Pic", command = face_dataset.getting_pic )
 b1.grid(row=3, column=1)
 
 b1 = Button(window, text='Upload', command=img_upload)
@@ -59,3 +61,5 @@ t1 = Text(window, width=20, height=10)
 t1.grid(row=4, column=1)
 
 window.mainloop()
+
+face_dataset.getting_pic()
