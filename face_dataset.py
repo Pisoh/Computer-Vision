@@ -46,5 +46,7 @@ def getting_pic():
     cv2.destroyAllWindows()
 
 
+getting_pic()
+
 
 
